@@ -11,8 +11,6 @@ A Python wrapper (neatm.py) is also provided.  All input is provided as scalar f
 ## Disclaimer:
 Most of this code was written during the first year of my PhD, ~15 years ago.  It may not be the most elegant or numerical efficient code ever, but it sure has been tested extensively.  Think of it as a Soyuz...
 
-## To-do list:
-I really should make the wrapper use astropy.units.  I'll do that as soon as I get around to it.
-
 ## Change log:
+2018/01/31: experimental astropy.units support on 'units' branch
 2018/01/31: Original release
