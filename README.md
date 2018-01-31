@@ -14,3 +14,5 @@ Most of this code was written during the first year of my PhD, ~15 years ago.  I
 ## To-do list:
 I really should make the wrapper use astropy.units.  I'll do that as soon as I get around to it.
 
+## Change log:
+2018/01/31: Original release
