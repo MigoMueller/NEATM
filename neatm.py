@@ -1,4 +1,4 @@
-# M.Mueller@astro.rug.nl, 2016/09/05
+# M.Mueller@astro.rug.nl, 2016/09/05+
 # Wrapper around my NEATM executable.
 # Output will be in mJy (default) or W/m^2/micron.
 # LambdaMu can be an array (iterable) or a scalar Quantity;
@@ -28,7 +28,8 @@ def neatm(h,g,alpha,r,delta,lambdaMu,eta,pv, mJy=True):
     cmd=['neatm']
     for var in [h,g,alpha,r,delta,lambdaMu,eta,pv]:
         cmd.append(str(var))
-    output = subprocess.check_output(cmd)
+    process=subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    output, cerr = process.communicate()
     output = output.split()
     if mJy:
         return float(output[1])*u.mJy
