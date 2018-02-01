@@ -6,13 +6,11 @@ Run 'make' in this directory.  Move the resulting binary (neatm) to a directory 
 'make clean' will remove temporary files (*.o).
 Running the binary from the command line should be reasonably self explanatory.
 
-A Python wrapper (neatm.py) is also provided.  All input is provided as scalar float (wavelengths may be iterable) in customary units: r and delta in AU, alpha in degree, wavelengths in micron.  It will call the C++ binary under the hood.
+A Python wrapper (neatm.py) is also provided.  All input is provided as scalar float (wavelengths may be iterable).  Values that carry physical units (r, delta, alpha, lambda, output flux) use astropy.units.  The wrapper calls the C++ binary under the hood.
 
 ## Disclaimer:
-Most of this code was written during the first year of my PhD, ~15 years ago.  It may not be the most elegant or numerical efficient code ever, but it sure has been tested extensively.  Think of it as a Soyuz...
-
-## To-do list:
-I really should make the wrapper use astropy.units.  I'll do that as soon as I get around to it.
+Most of this code was written during the first year of my PhD, ~15 years ago.  There's a number of things I'd do or word differently if I were to redo this from scratch.  On the flip-side, the code has been tested really extensively.  It works.
 
 ## Change log:
-2018/01/31: Original release
+* 2018/01/31: experimental astropy.units support on 'units' branch
+* 2018/01/31: Original release
