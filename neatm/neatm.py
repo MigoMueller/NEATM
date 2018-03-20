@@ -15,10 +15,10 @@ def neatm(h,g,alpha,r,delta,lambdaMu,eta,pv, mJy=True):
     except TypeError:
         pass # TypeError will be thrown if lambdaMu is a scalar; ignore and carry on
     try:
-        alpha=alpha.to(u.degree).value
-        r=r.to(u.AU).value
-        delta=delta.to(u.AU).value
-        lambdaMu=lambdaMu.to(u.micron).value
+        alpha=alpha.to_value(u.degree)
+        r=r.to_value(u.AU)
+        delta=delta.to_value(u.AU)
+        lambdaMu=lambdaMu.to_value(u.micron)
     except AttributeError:
         print("alpha, r, delta, and lambdaMu must be astropy quantities")
         raise
