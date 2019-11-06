@@ -1,3 +1,3 @@
 from .neatm import neatm
 from .reflected import reflected
-from .reflected import hg
+from .reflected import vmag
