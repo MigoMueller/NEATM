@@ -22,7 +22,7 @@ def neatm(h,g,alpha,r,delta,lambdaMu,eta,pv, mJy=True):
     except AttributeError:
         print("alpha, r, delta, and lambdaMu must be astropy quantities")
         raise
-    except UnitConversionError:
+    except u.UnitConversionError:
         print("Alpha must be an angle; r, delta, and lambdaMu must be (wave-)lengths")
         raise
     cmd=['neatm']
